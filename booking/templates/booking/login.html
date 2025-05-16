@@ -1,0 +1,19 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans "Tizimga kirish" %}</title>
+</head>
+<body>
+    <h1>{% trans "Agentlar uchun tizimga kirish" %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">{% trans "Login" %}:</label><br>
+        <input type="text" name="username" required><br><br>
+        <label for="password">{% trans "Parol" %}:</label><br>
+        <input type="password" name="password" required><br><br>
+        <button type="submit">{% trans "Kirish" %}</button>
+    </form>
+</body>
+</html>

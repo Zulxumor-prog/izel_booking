@@ -1,0 +1,26 @@
+# config.py
+
+# Telegram sozlamalari
+TOKEN = '7927590527:AAHu1eG-cDV_DHoiHim78G00VxaDl06a_84'
+GROUP_ID = -1002406229679
+
+# Ruxsatlar
+ALLOWED_USERS = [
+    111111111,  # Zulxumor
+    222222222   # Islom
+]
+ADMINS = [
+    5342946906
+]
+
+# Google Sheets
+SHEET_ID = '1Juz_Tn8lPsY8Ozn7eICPitArMggWBnjx8xuNT49EKsI'
+
+PASSPORT_FOLDER_ID = '1-p77VYsOfDzmU_127N_AWLCK3IjUQ-mj'
+PHOTO_FOLDER_ID = '1TNckMMW0w2j87CoNTf534qUKDE_eJRBg'
+RECEIPT_FOLDER_ID = '1sGtCAPQ1wSR49YgdB0GazAfTULqdLX_V'
+
+SERVICE_ACCOUNT_FILE = 'credentials/izel-agent.json'
+
+ALLOWED_USERS = [5342946906]
+PDF_FOLDER_PATH = 'media/receipt'

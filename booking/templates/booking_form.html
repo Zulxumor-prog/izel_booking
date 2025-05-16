@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url('{% static "images/banner.png" %}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .glass {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 16px;
+        padding: 30px;
+        margin-top: 30px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+</style>
+
+<div class="container glass">
+    <div class="text-center mb-4">
+        <img src="{% static 'images/logo.jpg' %}" alt="Logo" height="60">
+        <h2 class="mt-3 text-danger">{{ agent.name }} — {% trans "Mijoz bron qilish" %}</h2>
+    </div>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success text-center">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">{% trans "Yuborish" %}</button>
+    </form>
+</div>
+{% endblock %}

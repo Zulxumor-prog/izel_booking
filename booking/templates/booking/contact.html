@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url('{% static "images/banner.png" %}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        backdrop-filter: brightness(0.6);
+    }
+    .contact-box {
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 15px;
+        padding: 30px;
+    }
+    a.btn i {
+        margin-right: 8px;
+    }
+</style>
+
+<section class="py-5">
+    <div class="container">
+        <div class="contact-box text-center">
+            <h1 class="fw-bold mb-4">{% trans "Biz bilan aloqa" %}</h1>
+            <p class="lead mb-4">{% trans "Quyidagi manzillar orqali bog‘lanishingiz mumkin:" %}</p>
+            <ul class="list-unstyled mb-4">
+                <li><strong>Email:</strong> izelchina@gmail.com</li>
+                <li><strong>{% trans "Telefon" %}:</strong> +998 94 092 55 44</li>
+            </ul>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="https://t.me/menedjer_izel" target="_blank" class="btn btn-outline-light">
+                    <i class="fab fa-telegram"></i> {% trans "Telegramga yozish" %}
+                </a>
+                <a href="https://www.instagram.com/xitoy_expres_karimovs/profilecard/?igsh=NmMyeWo1bDNhbTh4" target="_blank" class="btn btn-outline-light">
+                    <i class="fab fa-instagram"></i> {% trans "Instagram sahifa" %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="text-center py-4 bg-dark text-white border-top mt-5">
+    <p class="mb-0 small">© 2025 IZEL Booking — {% trans "Barcha huquqlar himoyalangan." %}</p>
+</footer>
+{% endblock %}

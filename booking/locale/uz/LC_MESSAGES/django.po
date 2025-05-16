@@ -1,0 +1,220 @@
+# Uzbek translation for IZEL Booking
+# Copyright (C) 2025 IZEL Booking
+# This file is distributed under the same license as the IZEL Booking project.
+# Zulxumor <zulxumorrisqiboyeva@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: IZEL Booking\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-12 21:44+0500\n"
+"PO-Revision-Date: 2025-05-07 10:10+0500\n"
+"Last-Translator: Zulxumor <zulxumorrisqiboyeva@gmail.com>\n"
+"Language-Team: Uzbek <uz@li.org>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\templates\base.html:7 .\templates\base.html:38
+#: .\templates\booking\home.html:7
+msgid "IZEL Booking"
+msgstr "IZEL Bron platformasi"
+
+#: .\templates\base.html:58 .\templates\booking\contact.html:47
+#: .\templates\booking\home.html:97
+msgid "Barcha huquqlar himoyalangan."
+msgstr "Barcha huquqlaringiz himoyalangan."
+
+#: .\templates\booking\agent_dashboard.html:25
+msgid "Mijozni ro‘yxatdan o‘tkazish"
+msgstr "Mijozni ro’yxatdan o’tkazishingiz uchun"
+
+#: .\templates\booking\agent_dashboard.html:39 .\templates\booking_form.html:37
+msgid "Yuborish"
+msgstr "Adminga yuborish"
+
+#: .\templates\booking\agent_dashboard.html:42
+msgid "Reyslar bo‘yicha qolgan joylar"
+msgstr "Bo’sh joylar"
+
+#: .\templates\booking\agent_dashboard.html:53
+msgid "Sana"
+msgstr "Vaqt"
+
+#: .\templates\booking\agent_dashboard.html:54
+#: .\templates\booking\routes.html:33 .\templates\booking\tour_list.html:38
+msgid "Qolgan joylar"
+msgstr "Bo’sh joylar"
+
+#: .\templates\booking\agent_dashboard.html:62
+msgid "Mening bronlarim"
+msgstr "Mening mijozlarim bandlovlari"
+
+#: .\templates\booking\agent_dashboard.html:66
+msgid "Mijoz"
+msgstr "Mijoz ismi"
+
+#: .\templates\booking\agent_dashboard.html:67
+#: .\templates\booking\contact.html:32
+msgid "Telefon"
+msgstr "Telefon raqami"
+
+#: .\templates\booking\agent_dashboard.html:68
+#: .\templates\booking\booking_form.html:29
+#, fuzzy
+#| msgid "Yo‘nalishlar"
+msgid "Yo‘nalish"
+msgstr "Yo‘nalishlarimiz"
+
+#: .\templates\booking\agent_dashboard.html:69
+msgid "Komissiya ($)"
+msgstr "BONUS ($)"
+
+#: .\templates\booking\booking_form.html:6
+#: .\templates\booking\booking_form.html:53
+msgid "Bron qilish"
+msgstr "Joy bron qilish"
+
+#: .\templates\booking\booking_form.html:14
+msgid "Mijoz ma’lumotlarini kiriting"
+msgstr "Mijozingiz ma’lumotlarini kiriting"
+
+#: .\templates\booking\booking_form.html:21
+msgid "Mijoz ismi"
+msgstr "Mijoz ismini kiriting"
+
+#: .\templates\booking\booking_form.html:25
+msgid "Telefon raqami"
+msgstr "Telefon raqamini kiriting"
+
+#: .\templates\booking\booking_form.html:33
+msgid "Reysni tanlang"
+msgstr "Reys tanglang"
+
+#: .\templates\booking\booking_form.html:37
+msgid "Passport skaneri"
+msgstr "Passport skaneri pdf"
+
+#: .\templates\booking\booking_form.html:41
+msgid "3x4 rasm"
+msgstr "3*4 rasm orqa foni oq"
+
+#: .\templates\booking\booking_form.html:45
+msgid "To‘lov chek"
+msgstr "To‘lov tavfsilotlari"
+
+#: .\templates\booking\booking_form.html:49
+msgid "Holat"
+msgstr "Holati"
+
+#: .\templates\booking\contact.html:28
+#, fuzzy
+#| msgid "Biz bilan bog‘lanish"
+msgid "Biz bilan aloqa"
+msgstr "Bizning bog‘lanish uchun"
+
+#: .\templates\booking\contact.html:29
+msgid "Quyidagi manzillar orqali bog‘lanishingiz mumkin:"
+msgstr "Bizning ijtimoiy tarmoqdagi manzillarimiz orqali bog‘lanishingiz mumkin "
+
+#: .\templates\booking\contact.html:36
+msgid "Telegramga yozish"
+msgstr "B2B menedjer"
+
+#: .\templates\booking\contact.html:39
+msgid "Instagram sahifa"
+msgstr "Instagramdagi sahifamiz"
+
+#: .\templates\booking\home.html:64
+#, fuzzy
+#| msgid "Xush kelibsiz IZEL Booking sayohat platformasiga!"
+msgid "Xush kelibsiz IZEL Booking!"
+msgstr "IZEL Booking sayohat platformasiga xush kelibsiz!"
+
+#: .\templates\booking\home.html:65
+#, fuzzy
+#| msgid ""
+#| "Xitoyga biznes safarlar, reyslar, bron qilish va agentlik tizimi bir "
+#| "joyda."
+msgid ""
+"Xitoyga biznes safarlar, reyslar, bron qilish va agentlik tizimi — barchasi "
+"bir joyda."
+msgstr ""
+"Xitoyga reyslar, biznes safarlar, bron qilish va agentlik tizimi bir joyda."
+
+#: .\templates\booking\home.html:67
+msgid "Reyslarni ko‘rish"
+msgstr "Reyslarni ko‘rish sahifasi"
+
+#: .\templates\booking\home.html:78
+msgid "Yo‘nalishlar"
+msgstr "Yo‘nalishlarimiz"
+
+#: .\templates\booking\home.html:83
+#, fuzzy
+#| msgid "Biz bilan bog‘lanish"
+msgid "Bog‘lanish"
+msgstr "Biz bilan aloqa"
+
+#: .\templates\booking\home.html:88
+msgid "Kabinet"
+msgstr "Shaxsiy kabinet"
+
+#: .\templates\booking\login.html:6
+msgid "Tizimga kirish"
+msgstr "Agentlar Tizimiga kirish "
+
+#: .\templates\booking\login.html:9
+msgid "Agentlar uchun tizimga kirish"
+msgstr "Agentlar Tizimiga kirish"
+
+#: .\templates\booking\login.html:12
+msgid "Login"
+msgstr "Loginingiz"
+
+#: .\templates\booking\login.html:14
+msgid "Parol"
+msgstr "Parolingiz"
+
+#: .\templates\booking\login.html:16
+msgid "Kirish"
+msgstr "Tizimga Kirish"
+
+#: .\templates\booking\routes.html:21
+#, fuzzy
+#| msgid "Yo‘nalishlar"
+msgid "Bizning yo‘nalishlar"
+msgstr "Yo‘nalishlarimiz"
+
+#: .\templates\booking\tour_list.html:24
+msgid "Tur paketlar ro'yxati"
+msgstr "Xizmatlarimiz ro‘yxati"
+
+#: .\templates\booking\tour_list.html:36
+msgid "Narxi"
+msgstr "Narxlari"
+
+#: .\templates\booking\tour_list.html:37
+msgid "Muddati"
+msgstr "Vaqti"
+
+#: .\templates\booking_form.html:25
+msgid "Mijoz bron qilish"
+msgstr "Mijozni Ro‘yxatdan o‘tkazish"
+
+#: .\templates\success.html:7
+msgid "Bron muvaffaqiyatli yuborildi!"
+msgstr "Ma‘lumotlar muvaffaqiyatli yuborildi!"
+
+#: .\templates\success.html:8
+msgid "Tez orada menejerlar siz bilan bog‘lanadi."
+msgstr "Siz bilan tez orada menedjer bog‘lanadi."
+
+#: .\templates\success.html:10
+msgid "Bosh sahifaga qaytish"
+msgstr "Bosh sahifaga qaytish uchun bosing"
+
+#~ msgid "Shaxsiy kabinet"
+#~ msgstr "Shaxsiy sahifangiz"

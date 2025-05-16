@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url('{% static "images/banner.png" %}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .glass {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        margin-top: 30px;
+    }
+</style>
+
+<div class="container glass">
+    <div class="text-center mb-4">
+        <img src="{% static 'images/logo.jpg' %}" alt="IZEL Logo" height="60">
+        <h2 class="text-danger mt-3">{% trans "Mijozni ro‘yxatdan o‘tkazish" %}</h2>
+    </div>
+
+    {% if messages %}
+      <div class="alert alert-success">
+        {% for message in messages %}
+          <div>{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data" class="mb-5">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">{% trans "Yuborish" %}</button>
+    </form>
+
+    <h3 class="text-center text-primary my-4">{% trans "Reyslar bo‘yicha qolgan joylar" %}</h3>
+    <div class="row">
+        {% for tour in tours %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                {% if tour.image %}
+                <img src="{{ tour.image.url }}" class="card-img-top" alt="{{ tour.direction }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title text-danger">{{ tour.direction }}</h5>
+                    <p class="card-text">
+                        {% trans "Sana" %}: {{ tour.date }}<br>
+                        {% trans "Qolgan joylar" %}: {{ tour.remaining_seats }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h3 class="text-center text-secondary my-4">{% trans "Mening bronlarim" %}</h3>
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>{% trans "Mijoz" %}</th>
+                <th>{% trans "Telefon" %}</th>
+                <th>{% trans "Yo‘nalish" %}</th>
+                <th>{% trans "Komissiya ($)" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for booking in bookings %}
+            <tr>
+                <td>{{ booking.client_name }}</td>
+                <td>{{ booking.phone }}</td>
+                <td>{{ booking.route }}</td>
+                <td>{{ booking.commission }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

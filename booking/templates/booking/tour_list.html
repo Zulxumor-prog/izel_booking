@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url('{% static "images/banner.png" %}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        overflow: hidden;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <img src="{% static 'images/logo.jpg' %}" alt="IZEL Booking" height="60">
+        <h2 class="text-white mt-3">{% trans "Tur paketlar ro'yxati" %}</h2>
+    </div>
+
+    <div class="row">
+        {% for tour in tours %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow">
+                {% if tour.image %}
+                <img src="{{ tour.image.url }}" class="card-img-top" alt="{{ tour.direction }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title text-danger">{{ tour.direction }}</h5>
+                    <p class="card-text">{% trans "Narxi" %}: {{ tour.price }}$</p>
+                    <p class="card-text">{% trans "Muddati" %}: {{ tour.date }}</p>
+                    <p class="card-text">{% trans "Qolgan joylar" %}: {{ tour.remaining_seats }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
