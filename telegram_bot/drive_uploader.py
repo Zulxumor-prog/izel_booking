@@ -1,30 +1,33 @@
 import os
+import json 
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 from django.conf import settings
 
-# Google Drive API sozlamalari
-SCOPES = ['https://www.googleapis.com/auth/drive.file']
-SERVICE_ACCOUNT_FILE = 'credentials/izel-agent.json'
+# JSON credentialni atrof-muhit (environment variable) dan o‘qish
+credentials_json = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS_JSON")
+credentials_info = json.loads(credentials_json)
 
-credentials = service_account.Credentials.from_service_account_file(
-    SERVICE_ACCOUNT_FILE, scopes=SCOPES
+# Google API credential yaratish
+credentials = service_account.Credentials.from_service_account_info(
+    credentials_info,
+    scopes=['https://www.googleapis.com/auth/drive.file']
 )
 
-drive_service = build('drive', 'v3', credentials=credentials)
+# Drive service yaratish
+drive_service = build("drive", "v3", credentials=credentials)
 
-# Asosiy yuklovchi funksiya
+# Yuklovchi funksiya
 def upload_file(file_path, file_name, folder_id):
     file_metadata = {
-        'name': file_name,
-        'parents': [folder_id]
+        "name": file_name,
+        "parents": [folder_id]
     }
     media = MediaFileUpload(file_path, resumable=True)
     file = drive_service.files().create(
         body=file_metadata,
         media_body=media,
-        fields='id'
+        fields="id"
     ).execute()
-
     return f"https://drive.google.com/file/d/{file.get('id')}/view?usp=sharing"
