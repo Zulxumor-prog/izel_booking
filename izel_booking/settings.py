@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--8l@sej2fit^bc&_ykkzx8sw!9$%#=^=vua)2(sm_3l9xf^%g^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['izel-booking.onrender.com']
 
 
 # Application definition
