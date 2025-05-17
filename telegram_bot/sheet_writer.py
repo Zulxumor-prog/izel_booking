@@ -1,4 +1,6 @@
 import gspread
+import json 
+import os
 from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime
 from django.conf import settings 
@@ -6,7 +8,9 @@ SHEET_ID = settings.GOOGLE_SHEET_ID
 
 # 1. Google Sheets ulanishi
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("credentials/izel-agent.json", scope)
+credentials_json = os.environ.get("GOOGLE_CREDENTIALS")  # Render environment'dan
+credentials_dict = json.loads(credentials_json)
+creds = ServiceAccountCredentials.from_json_keyfile_dict(credentials_dict, scope)
 client = gspread.authorize(creds)
 sheet = client.open_by_key(SHEET_ID).sheet1
 

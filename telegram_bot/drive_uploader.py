@@ -6,7 +6,7 @@ from googleapiclient.http import MediaFileUpload
 from django.conf import settings
 
 # JSON credentialni atrof-muhit (environment variable) dan o‘qish
-credentials_json = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS_JSON")
+credentials_json = os.environ.get("GOOGLE_CREDENTIALS")
 credentials_info = json.loads(credentials_json)
 
 # Google API credential yaratish
